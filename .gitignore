@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+output/irpp_calc
+output/*.c
+output/*.h
+output/*.o
+!output/irpp_driver.c
