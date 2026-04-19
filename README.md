@@ -48,7 +48,26 @@ git clone https://github.com/erwanpaccard/irpp-mcp.git
 
 ---
 
-## Installation
+## Installation rapide (binaire pré-compilé)
+
+Si vous êtes sous Linux x86-64 ou WSL (Ubuntu 22.04+), vous pouvez sauter les étapes 1 à 4 et télécharger directement le binaire pré-compilé :
+
+```bash
+mkdir -p ~/impots/output
+wget https://github.com/erwanpaccard/irpp-mcp/releases/download/v1.0.0/irpp_calc \
+     -O ~/impots/output/irpp_calc
+chmod +x ~/impots/output/irpp_calc
+
+# Tester
+printf "V_0AC=1\nTSHALLOV=50000.00\n" | ~/impots/output/irpp_calc
+# → {"IINET": 6786.00, "NBPT": 1.00, "RNI": 45000.00, ...}
+```
+
+Puis passer directement à l'[étape 5](#étape-5--installer-le-serveur-mcp).
+
+---
+
+## Installation complète (compilation depuis les sources)
 
 ### Prérequis
 
